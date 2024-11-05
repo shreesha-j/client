@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import DashboardWrapper from "@/app/DashboardWrapper"
 import "./globals.css";
 
 const geistSans = localFont({
@@ -28,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <DashboardWrapper>
+          {children}
+        </DashboardWrapper>
       </body>
     </html>
   );
